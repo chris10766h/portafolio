@@ -1,4 +1,13 @@
-body{
-  background-color: rgb(235, 53, 21);
-  color:rgb(237, 215, 14)
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+
+  background: rgb(158, 192, 255);
+  color: rgb(80, 40, 40);
+ 
+}
+
+header {
+  background: rgba(63, 77, 230, 0.467);
+  color: rgb(234, 163, 244);
 }
