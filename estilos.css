@@ -220,18 +220,129 @@ section {
   transform: scale(1.05);
 }
 
+#encabezado {
+  background: #1a1a2e;
+  color: white;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu ul li a:hover {
+  color: var(--color-principal);
+}
+
+
+@media (max-width: 768px) {
+  .menu ul {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #1a1a2e;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;  
+  }
+
+  .menu ul.show {
+    display: flex;  
+  }
+
+  .menu-toggle {
+    display: block;  
+  }
+}
+
+.form-contacto {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border-color: var(--color-principal, #00adb5);
+}
+
+.form-contacto button {
+  padding: 12px;
+  background: var(--color-principal, #00adb5);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-contacto button:hover {
+  background: #007a80;
+}
+
+
 .btn-whatsapp {
   display: inline-block;
   margin-top: 15px;
-  padding: 12px 25px;
+  padding: 22px 25px;
   background: #25d366;
   color: white;
-  font-size: 18px;
+  font-size: 38px;
   font-weight: bold;
   border-radius: 30px;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: background 0.3s ease;
+    transform: scale(0.7)
   
 }
 

@@ -1,5 +1,5 @@
 
-const texto = "Hola, soy Cristian Acosta 👋 Jovenes Creativos ";
+const texto = "Hola, soy Cristian Acosta 👋 Jóvenes Creativos ";
 let i = 0;
 
 function escribir() {
@@ -49,10 +49,43 @@ function animarCirculos() {
   });
 }
 
+
 window.addEventListener("scroll", () => {
   mostrarAnimaciones();
   animarCirculos();
 });
-
 mostrarAnimaciones();
 animarCirculos();
+
+
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu ul");
+
+if (menuToggle && menu) {
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+}
+
+
+const form = document.getElementById("formulario-contacto");
+if (form) {
+  const inputs = form.querySelectorAll("input, textarea");
+
+  inputs.forEach(input => {
+    input.addEventListener("input", () => {
+      if (input.checkValidity()) {
+        input.style.borderColor = "green";
+      } else {
+        input.style.borderColor = "red";
+      }
+    });
+  });
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    alert("Formulario enviado correctamente ✅");
+    form.reset();
+    inputs.forEach(input => input.style.borderColor = "#ccc");
+  });
+}

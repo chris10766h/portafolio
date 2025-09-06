@@ -9,17 +9,20 @@
 </head>
 
 <body>
-    <header id="encabezado">
-        <nav class="menu">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<header id="encabezado">
+  <div class="logo">Mi Portafolio</div>
+  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  <nav class="menu">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
 
     <section id="inicio">
         <h1 id="escribir"></h1>
@@ -102,7 +105,13 @@
         <p>📧 Email:cristofer2007z@gmail.com </p>
         <p>📱 Teléfono: 3242558743</p>
         <p>📍 Ubicación: Cali, Colombia</p>
-        <a href="https://wa.me/573242558743" target="_blank" class="btn-whatsapp">💬 Contáctame</a>
+        <form action="https://formspree.io/f/xeolvavn" method="POST" class="form-contacto">
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <input type="email" name="email" placeholder="Tu correo" required>
+  <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+        <a href="https://wa.me/573242558743" target="_blank" class="btn-whatsapp">💬 whatsApp</a>
     </section>
     </section>
 
